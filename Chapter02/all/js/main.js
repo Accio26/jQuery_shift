@@ -11,4 +11,4 @@ $(function () {
 });
 
 // 基本的な構文
-$('#typo').css('color', #ebc000);
+// $('#typo').css('color', #ebc000);
