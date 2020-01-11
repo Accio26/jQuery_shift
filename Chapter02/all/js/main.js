@@ -332,3 +332,54 @@ thisは「データの取得専用の変数」のようなものです。thisに
 // });
 
 //
+
+// // 関数の作成例
+// function add(num1, num2) {
+//   return num1 + num2;
+// }
+
+// // 関数の作成例２
+// var added1 = add(1, 2);
+// var added2 = add(6, 7);
+// var added3 = added1 + added2;
+
+// function add(num1, num2) {
+//   return num1 + num2;
+// }
+
+// 無名関数
+
+// 無名関数の使用例
+// $(function() {
+//   $('#typo').on('mouseover', function() {
+//     $('#typo').css('color', '#ebc000');
+//   });
+// });
+
+// スコープの概念
+// var global = 'This is global'; // 全ての関数の外側で宣言されているので、全関数で利用可能
+
+// function a() {
+//   var local_a = 'This is local(a)'; // 変数local_aの宣言
+//   global; // 変数globalはグローバルスコープなので利用できる
+//   local_a; // 同一関数内で宣言された変数なので、利用できる
+//   local_aa; // この記述箇所よりも入れ子内で宣言されている変数なので、利用できない
+//   local_b; // 別の関数内で宣言されている変数なので、利用できない
+
+//   // 関数の入れ子
+//   function aa() {
+//     var local_aa = 'This is local(aa)';
+//     global; // 変数globalはグローバルスコープなので利用できる。
+//     local_a; // この箇所よりも外側で宣言されている変数なので利用できる。
+//     local_aa; // 同一関数内で宣言された変数なので、利用できる
+//     local_b; // 別の関数内で宣言されている変数なので利用できない
+//   }
+// }
+
+// function b() {
+//   var local_b = 'This is local(b)';
+//   global; // 変数globalはグローバルスコープなので利用できる
+//   local_a; // 別の関数内で宣言されている変数なので利用できない
+//   local_aa; // 別の関数内で宣言されている変数なので利用できない
+//   local_b; // 同一関数内で宣言されて変数なので利用できる
+// }
