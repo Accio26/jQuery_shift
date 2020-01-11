@@ -383,3 +383,58 @@ thisは「データの取得専用の変数」のようなものです。thisに
 //   local_aa; // 別の関数内で宣言されている変数なので利用できない
 //   local_b; // 同一関数内で宣言されて変数なので利用できる
 // }
+
+// 主な制御文
+
+// if文の使用例
+var a = 100;
+var b = 200;
+var c;
+
+if (a < b) {
+  c = a;
+} else if (b == 200) {
+  c = b;
+} else {
+  c = 300;
+}
+
+// switch文
+var a = 100;
+var b = 200;
+var c;
+
+switch (200) {
+  case a:
+    c = a;
+    break;
+  case b:
+    c = b;
+    break;
+  default:
+    c = 300;
+    break;
+}
+
+// for文の使用例１
+var a = [1, 2, 3, 4, 5, 6];
+var b = 0;
+
+for (var i = 0, len = a.length; i < len; i++) {
+  b += a[i];
+}
+
+// for文の使用例２
+var a = [1, 2, 3, 4, 5, 6];
+var b = 0;
+
+for (var i = 0, len = a.length; i < len; i++) {
+  var num = a[i];
+
+  if (num % 5 === 0) {
+    break;
+  } else if (num % 2 === 1) {
+    continue;
+  }
+  b += num;
+}
